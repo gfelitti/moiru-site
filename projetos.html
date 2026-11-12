@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetos anteriores | Moiru AI</title>
+<meta name="description" content="Projetos de dados e inteligência artificial para clima, meio ambiente e direitos, desenvolvidos pela equipe antes da Iara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#213C30; --green2:#172B22; --cream:#F6F2E8; --warm:#EDE6D3; --sand:#E7DEC8; --paper:#FBF9F3; --ink:#17231C; --ink2:#4A554D;
+  --clay:#C0582E; --rule:rgba(23,35,28,.16);
+  --serif:"Fraunces",Georgia,serif; --sans:"Figtree",system-ui,sans-serif;
+  --g:clamp(20px,5vw,72px); --hh:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hh) + 8px)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 18px/1.62 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}p{margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:-.012em}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:99}
+.max{max-width:1280px;margin:0 auto}.pad{padding-left:var(--g);padding-right:var(--g)}
+
+header{position:sticky;top:0;z-index:50;height:var(--hh);display:flex;align-items:center;background:rgba(246,242,232,.74);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}
+header.scrolled{border-bottom-color:var(--rule);background:rgba(246,242,232,.84)}
+header .max{width:100%;display:flex;align-items:center;gap:32px;max-width:none;padding:0 clamp(20px,3vw,44px)}
+.brand img{height:19px;width:auto}
+.back{margin-left:auto;text-decoration:none;font-weight:500;font-size:15.5px;display:inline-flex;gap:8px;align-items:center}
+.back:hover{text-decoration:underline;text-underline-offset:5px}
+.back svg{width:18px;height:18px}
+.btn{display:inline-block;font:600 15px/1 var(--sans);text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--green);color:#fff}
+.btn:hover{background:#2e5443}
+.totop{position:fixed;right:22px;bottom:22px;z-index:60;width:50px;height:50px;border-radius:50%;border:0;background:var(--green);color:#fff;cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s,background .2s;box-shadow:0 8px 24px rgba(23,35,28,.28)}
+.totop.on{opacity:1;transform:none;pointer-events:auto}.totop:hover{background:var(--clay)}
+
+/* abertura */
+.intro{padding:clamp(48px,7vw,104px) 0 clamp(40px,5vw,72px)}
+.intro .k{font:italic 400 22px var(--serif);color:var(--clay);margin-bottom:14px}
+.intro h1{font-size:clamp(44px,6vw,92px);line-height:1.02;letter-spacing:-.02em;color:var(--green);max-width:13em}
+.intro p{margin-top:26px;font-size:clamp(19px,1.6vw,22px);line-height:1.55;color:var(--ink2);max-width:34em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chips a{text-decoration:none;font-weight:500;font-size:15px;border:1.5px solid var(--green);color:var(--green);border-radius:999px;padding:9px 18px;transition:background .2s,color .2s}
+.chips a:hover{background:var(--green);color:#fff}
+
+/* cases */
+.case{padding:clamp(48px,6vw,88px) 0}
+.case:nth-of-type(odd){background:var(--warm)}
+.case:nth-of-type(even){background:var(--paper)}
+.case .max{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,6vw,96px);align-items:center}
+.case.rev .max{grid-template-columns:7fr 5fr}.case.rev .tile{order:2}
+.tile{aspect-ratio:1/1;border-radius:28px;display:grid;place-items:center;position:relative;overflow:hidden;padding:clamp(24px,4vw,56px)}
+.tile img{width:min(100%,78%);height:auto;max-height:82%;object-fit:contain}
+.tile.art{padding:0;aspect-ratio:auto;max-width:380px;justify-self:center}.tile.art img{width:100%;max-width:none;height:auto;max-height:none}
+.tile .nm{font:500 clamp(30px,3.6vw,52px)/1.02 var(--serif);letter-spacing:-.02em;text-align:center}
+.tile .nm small{display:block;font:italic 400 .42em/1.3 var(--serif);margin-top:14px;letter-spacing:0;opacity:.85}
+.t-wap{background:#171717;color:#fff}.t-wap .nm b{color:#F0761B}
+.t-tal{background:#FDC426;color:#2a2108}
+.tag{display:inline-flex;align-items:center;gap:8px;font:600 13.5px var(--sans);letter-spacing:.02em;color:var(--clay);margin-bottom:14px;text-transform:uppercase}
+.tag i{width:22px;height:2px;background:var(--clay);display:block}
+.case h2{font-size:clamp(32px,3.6vw,52px);line-height:1.06;color:var(--green)}
+.case .txt{margin-top:20px;font-size:19px;color:var(--ink2);max-width:33em}
+.case blockquote{margin:30px 0 0;padding:4px 0 4px 26px;border-left:3px solid var(--clay);font:italic 400 clamp(19px,1.7vw,23px)/1.45 var(--serif);color:var(--green);max-width:30em}
+.case figcaption,.case .by{margin-top:16px;font:500 15px var(--sans);color:var(--ink2);font-style:normal}
+.case .by b{color:var(--ink);font-weight:600}
+.note{margin-top:18px;font-size:14.5px;color:var(--ink2)}
+
+/* fecho */
+.end{background:var(--green);color:#fff;padding:clamp(56px,7vw,104px) 0}
+.end .max{display:grid;grid-template-columns:8fr 4fr;gap:40px;align-items:center}
+.end h2{font-size:clamp(34px,5vw,72px);line-height:1;letter-spacing:-.025em}
+.end p{margin-top:18px;font-size:20px;color:#C5D3CA;max-width:28em}
+.end .btn{background:var(--cream);color:var(--green);padding:22px 38px;font-size:19px;justify-self:center}
+.end .btn:hover{background:#fff}
+footer{background:var(--green2);color:#A9BBB0;padding:36px 0 48px;font-size:14px}
+footer .max{display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap}
+footer img{filter:brightness(0) invert(.93)}footer a{color:#D5E0D8}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .case .max,.case.rev .max,.end .max{grid-template-columns:1fr}
+  .case.rev .tile{order:0}
+  .tile{aspect-ratio:4/3}
+  .tile.art{aspect-ratio:auto;max-width:300px;justify-self:start}
+  .tile img{max-height:80%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header id="hd">
+  <div class="max">
+    <a class="brand" href="./" aria-label="Moiru, página inicial"><img src="img/moiru-logo.webp" alt="Moiru" width="90" height="19"></a>
+    <a class="back" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar ao site</a>
+    <a class="btn" href="./#contato">Fale conosco</a>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="intro">
+  <div class="max pad">
+    <div class="k">Antes da Iara</div>
+    <h1>Dados e IA para clima, meio ambiente e direitos.</h1>
+    <p>Alguns dos projetos que a equipe desenvolveu antes da Iara, com organizações que trabalham com política climática, proteção ambiental, direitos dos animais e combate à desinformação.</p>
+    <nav class="chips" aria-label="Projetos"><a href="#talanoa">Talanoa</a><a href="#wap">World Animal Protection</a><a href="#mentira">A Mentira Tem Preço</a></nav>
+  </div>
+</section>
+
+<section class="case" id="talanoa">
+  <div class="max pad">
+    <div class="tile t-tal rv"><div class="nm">Instituto<br>Talanoa<small>think tank de política climática</small></div></div>
+    <div class="rv">
+      <span class="tag"><i></i>Política climática</span>
+      <h2>Monitoramento das políticas climáticas do Brasil</h2>
+      <p class="txt">Acompanhar as políticas climáticas de um país no centro do debate sobre o clima é essencial para tornar as decisões de governo mais transparentes para a sociedade civil. O Instituto Talanoa, think tank brasileiro, é referência nessa área. A equipe trabalhou para que toda a infraestrutura e os mecanismos de classificação inteligente das ações de governo continuem entregando, de forma consistente, os insumos de que a equipe de especialistas do Talanoa precisa para analisar o cenário nacional.</p>
+      <p class="by"><b>Instituto Talanoa</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="case rev" id="wap">
+  <div class="max pad">
+    <div class="tile t-wap rv"><div class="nm">World<br><b>Animal</b><br>Protection<small>organização internacional de proteção animal</small></div></div>
+    <div class="rv">
+      <span class="tag"><i></i>Direitos dos animais</span>
+      <h2>Como o debate sobre direitos dos animais se forma no Brasil</h2>
+      <p class="txt">Análise de discurso com IA para entender os atores, as conexões e as tendências do debate sobre animais de estimação, animais silvestres e pecuária no país.</p>
+      <blockquote>“[…] filtramos e analisamos esses dados para ter uma compreensão profunda de como esse discurso está sendo moldado no país, identificando atores-chave, pontos de conexão e tendências emergentes. Esses insights são fundamentais para orientar, com precisão e impacto, nossas estratégias de engajamento em campanhas.”</blockquote>
+      <p class="by"><b>Rodrigo Gerhardt</b>, World Animal Protection (WAP)</p>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="mentira">
+  <div class="max pad">
+    <div class="tile art rv"><img src="img/case-mentira.webp" alt="Arte da campanha A Mentira Tem Preço" width="344" height="552" loading="lazy"></div>
+    <div class="rv">
+      <span class="tag"><i></i>Desinformação climática</span>
+      <h2>A Mentira Tem Preço</h2>
+      <p class="txt">Mapeamento de conversas no YouTube sobre meio ambiente, clima e discurso de ódio no Brasil, para o projeto que expõe o alto custo da desinformação climática desde 2020.</p>
+      <blockquote>“A desinformação climática distorce nossa percepção das soluções para o clima, enfraquece políticas públicas nacionais e internacionais e, nos territórios locais, se traduz em ameaças, divisão e morte. ‘A Mentira Tem Preço’ expõe o alto custo da desinformação sobre clima, meio ambiente e discurso de ódio no Brasil desde 2020. […] desenvolvemos uma metodologia para mapear conversas no YouTube sobre meio ambiente, clima e discurso de ódio no Brasil.”</blockquote>
+      <p class="by"><b>Thaís Lazzeri</b>, FALA e A Mentira Tem Preço</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="end">
+  <div class="max pad">
+    <div><h2>Quer a Iara na sua secretaria?</h2><p>Escreva para nós e conversamos sobre a implantação no seu município, estado ou órgão.</p></div>
+    <a class="btn" href="./#contato">Vamos conversar</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="max pad">
+    <a class="brand" href="./" aria-label="Moiru, página inicial"><img src="img/moiru-logo.webp" alt="Moiru" width="90" height="19"></a>
+    <p>© 2026 Moiru AI</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4M4.5 9.5L10 4l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'),tt=document.getElementById('totop');
+  function s(){hd.classList.toggle('scrolled',scrollY>8);tt.classList.toggle('on',scrollY>700)}
+  addEventListener('scroll',s,{passive:true});s();
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
