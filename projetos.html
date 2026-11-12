@@ -54,10 +54,7 @@ header .max{width:100%;display:flex;align-items:center;gap:32px;max-width:none;p
 .tile{aspect-ratio:1/1;border-radius:28px;display:grid;place-items:center;position:relative;overflow:hidden;padding:clamp(24px,4vw,56px)}
 .tile img{width:min(100%,78%);height:auto;max-height:82%;object-fit:contain}
 .tile.art{padding:0;aspect-ratio:auto;max-width:380px;justify-self:center}.tile.art img{width:100%;max-width:none;height:auto;max-height:none}
-.tile .nm{font:500 clamp(30px,3.6vw,52px)/1.02 var(--serif);letter-spacing:-.02em;text-align:center}
-.tile .nm small{display:block;font:italic 400 .42em/1.3 var(--serif);margin-top:14px;letter-spacing:0;opacity:.85}
-.t-wap{background:#171717;color:#fff}.t-wap .nm b{color:#F0761B}
-.t-tal{background:#FDC426;color:#2a2108}
+.t-wap,.t-tal{background:#fff}
 .tag{display:inline-flex;align-items:center;gap:8px;font:600 13.5px var(--sans);letter-spacing:.02em;color:var(--clay);margin-bottom:14px;text-transform:uppercase}
 .tag i{width:22px;height:2px;background:var(--clay);display:block}
 .case h2{font-size:clamp(32px,3.6vw,52px);line-height:1.06;color:var(--green)}
@@ -113,7 +110,7 @@ footer img{filter:brightness(0) invert(.93)}footer a{color:#D5E0D8}
 
 <section class="case" id="talanoa">
   <div class="max pad">
-    <div class="tile t-tal rv"><div class="nm">Instituto<br>Talanoa<small>think tank de política climática</small></div></div>
+    <div class="tile t-tal rv"><img src="img/case-talanoa.webp" alt="Logo do Instituto Talanoa" width="763" height="443" loading="lazy"></div>
     <div class="rv">
       <span class="tag"><i></i>Política climática</span>
       <h2>Monitoramento das políticas climáticas do Brasil</h2>
@@ -125,7 +122,7 @@ footer img{filter:brightness(0) invert(.93)}footer a{color:#D5E0D8}
 
 <section class="case rev" id="wap">
   <div class="max pad">
-    <div class="tile t-wap rv"><div class="nm">World<br><b>Animal</b><br>Protection<small>organização internacional de proteção animal</small></div></div>
+    <div class="tile t-wap rv"><img src="img/case-wap.webp" alt="Logo da World Animal Protection" width="592" height="594" loading="lazy"></div>
     <div class="rv">
       <span class="tag"><i></i>Direitos dos animais</span>
       <h2>Como o debate sobre direitos dos animais se forma no Brasil</h2>
