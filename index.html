@@ -10,7 +10,7 @@
 <meta name="description" content="A Iara, plataforma de IA desenvolvida pela Moiru e pelo Imazon em parceria com secretarias municipais de meio ambiente, automatiza boa parte do trabalho dos relatórios de fiscalização ambiental. Os quatro municípios no Pará estão em fase de teste, em casos reais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&family=Quicksand:wght@500&family=Roboto+Slab:wght@800&family=Roboto:wght@300&display=swap" rel="stylesheet">
 <style>
 :root{
   --green:#213C30; --green2:#172B22; --green3:#2B4A3B; --cream:#F6F2E8; --warm:#EDE6D3; --sand:#E7DEC8; --paper:#FBF9F3; --ink:#17231C; --ink2:#4A554D;
@@ -79,6 +79,22 @@ nav a:hover{text-decoration:underline;text-underline-offset:5px}
 .blk{padding:var(--sp) 0}
 .top{max-width:46em;margin-bottom:clamp(32px,4vw,56px)}
 .top p{margin-top:20px;font-size:20px;color:var(--ink2)}
+/* Assinatura da Iara, conforme o kit de marca do Imazon. Tudo em em: o font-size do .iara-sig define o tamanho. */
+.iara-sig{display:inline-flex;align-items:center;line-height:1;font-size:96px;margin-bottom:30px}
+.iara-wm{display:inline-flex;align-items:baseline;white-space:nowrap}
+.iara-wm .ia{font:800 1em "Roboto Slab",serif;letter-spacing:-.01em;background:linear-gradient(200deg,#4A7434 0%,#6E9B52 45%,#93C07A 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.iara-wm .ra{font:300 1em "Roboto",sans-serif;color:#223C2F;margin-left:.03em}
+.iara-sig .iara-bar{display:block;width:max(1.5px,.011em);height:.85em;margin:0 .26em 0 .3em;background:#223C2F;opacity:.4;transform:translateY(.09em)}
+.iara-sig .desc{display:block;font:500 .165em/1.6 "Quicksand",sans-serif;color:#7E9384;transform:translateY(.79em);text-align:left}
+/* Selo da Iara sobre as telas do topo */
+.hero .selo{position:absolute;right:5%;top:6%;z-index:5;background:#F0EEE2;border-radius:14px;padding:12px 22px 10px 18px;box-shadow:0 18px 40px rgba(23,35,28,.2);line-height:0}
+.hero .selo .iara-sig{font-size:clamp(46px,4.1vw,62px);margin:-.2em 0 -.02em}
+.hero .selo .iara-sig .desc{font-size:.215em;line-height:1.5;transform:translateY(.62em)}
+@media (max-width:640px){
+  .iara-sig{font-size:62px;flex-wrap:wrap}.iara-sig .iara-bar{display:none}
+  .iara-sig .desc{flex-basis:100%;font-size:14px;transform:none;margin-top:12px}
+  .hero .selo{right:4%;top:4%;padding:10px 14px 12px}.hero .selo .iara-sig{font-size:40px;flex-wrap:nowrap}.hero .selo .iara-sig .iara-bar{display:block}.hero .selo .iara-sig .desc{flex-basis:auto;font-size:9.5px;margin-top:0;transform:translateY(.62em)}
+}
 .warm{background:var(--warm)}
 .paperbg{background:var(--paper)}
 
@@ -194,7 +210,15 @@ html[data-flow="3"] .chain li:nth-child(5) .dot{animation-delay:2.4s}
 .spine .sm h3{margin:8px 0 4px}
 .spine .sm p{color:var(--ink2);max-width:34em}
 .spine .panel{background:var(--green);border-radius:20px;padding:clamp(22px,3vw,44px);overflow:hidden;position:relative}
-.spine .panel .tag{position:absolute;right:18px;top:16px;font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:5px 12px}
+.spine .panel .tag{position:absolute;right:18px;top:16px;font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);border-radius:999px;padding:5px 13px 6px 12px;display:inline-flex;align-items:baseline;gap:.35em}
+/* Nome da Iara solto no texto (sem descritor), com a cor de cada fundo */
+.iwm{display:inline-flex;align-items:baseline;white-space:nowrap;letter-spacing:0;line-height:inherit}
+.iwm .ia{font:800 1em "Roboto Slab",serif;letter-spacing:-.01em}
+.iwm .ra{font:300 1em "Roboto",sans-serif;margin-left:.03em}
+.iwm-dk .ia{color:#CDE6BF}.iwm-dk .ra{color:#F0EEE2}
+.spine .panel .tag .iwm{font-size:1.35em}
+.iwm-mono .ia,.iwm-mono .ra{color:#fff}
+.contact h2 .iwm{font-size:.84em;margin:0 .04em}
 .spine .panel .fr{margin-top:0}
 .spine .panel .tilt{width:112%}
 
@@ -362,6 +386,7 @@ footer a{color:#D5E0D8}
     </div>
   </div>
   <div class="r" id="depth">
+    <div class="selo"><div class="iara-sig" role="img" aria-label="Iara, Inteligência Artificial para Relatórios Ambientais"><span class="iara-wm" aria-hidden="true"><span class="ia">ia</span><span class="ra">ra</span></span><span class="iara-bar" aria-hidden="true"></span><span class="desc" aria-hidden="true">Inteligência Artificial para<br>Relatórios Ambientais</span></div></div>
     <div class="ly web" data-d="10">
       <div class="stack w" data-cyc="7600">
         <img class="on" src="img/moiru-web-alertas.webp" alt="Painel da Iara com alertas sobre o mapa de satélite" width="1408" height="834">
@@ -445,7 +470,7 @@ footer a{color:#D5E0D8}
 
 <section class="contact" id="contato">
   <div class="max pad">
-    <div><h2>Quer a Iara na sua secretaria?</h2><p>Escreva para nós e conversamos sobre a implantação no seu município, estado ou órgão.</p></div>
+    <div><h2>Quer a <span class="iwm iwm-mono" role="img" aria-label="Iara"><span class="ia">ia</span><span class="ra">ra</span></span> na sua instituição?</h2><p>Escreva para nós e conversamos sobre a implantação no seu município, estado ou órgão.</p></div>
     <form class="cform" action="https://formsubmit.co/e610a45a748310d1c0a0dd2c09ba634d" method="POST">
       <input type="hidden" name="_subject" value="Contato via site Moiru">
       <input type="hidden" name="_cc" value="flavio@novelo.io">
@@ -546,7 +571,7 @@ footer a{color:#D5E0D8}
     if(!opts.nobrk)h+='<div class="brk'+(opts.dk?' dk-brk':'')+'"><i></i><span>Onde a Iara atua</span></div><p class="legend">Os pontos preenchidos marcam onde a Iara atua.</p>';
     return h;
   }
-  function top(dk){return '<div class="top"><h2>'+H2+'</h2><p>'+LEAD+'</p></div>'}
+  function top(dk){return '<div class="top"><div class="iara-sig" role="img" aria-label="Iara, Inteligência Artificial para Relatórios Ambientais"><span class="iara-wm" aria-hidden="true"><span class="ia">ia</span><span class="ra">ra</span></span><span class="iara-bar" aria-hidden="true"></span><span class="desc" aria-hidden="true">Inteligência Artificial para<br>Relatórios Ambientais</span></div><h2>'+H2+'</h2><p>'+LEAD+'</p></div>'}
 
   /* ---------- Etapas + telas (linha vertical) ---------- */
   function renderSV(){
@@ -554,7 +579,7 @@ footer a{color:#D5E0D8}
     ST.forEach(function(s,i){
       var inn=i>=1&&i<=3;
       h+='<li class="'+(inn?'on':'')+'"><span class="sd">'+(i+1)+'</span>';
-      if(inn)h+='<div class="panel rowset"><span class="tag">Iara atua aqui</span>'+row(i,i==2)+'</div>';
+      if(inn)h+='<div class="panel rowset"><span class="tag"><span class="iwm iwm-dk" aria-label="Iara"><span class="ia">ia</span><span class="ra">ra</span></span> atua aqui</span>'+row(i,i==2)+'</div>';
       else h+='<div class="sm"><span style="display:flex;gap:10px;align-items:center;font:italic 400 21px var(--serif);color:var(--clay)">'+IC[i].replace('<svg','<svg width="22" height="22"')+'Etapa '+(i+1)+', '+s.n+'</span><h3>'+s.title+'</h3><p>'+s.bul.join(' ')+'</p></div>';
       h+='</li>';
     });
